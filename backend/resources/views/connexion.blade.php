@@ -34,7 +34,7 @@
 <body>
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -42,8 +42,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="inscription.html" class="nav-item nav-link">Inscription</a>
+                <a href="/" class="nav-item nav-link active">Accueil</a>
+                <a href="/inscription" class="nav-item nav-link">Inscription</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -91,7 +91,7 @@
                     </div>
                     <div class="text-center mt-3">
                         <b>Vous n'avez pas un compte ?</b>
-                        <a href="inscription.html" class="text-warning">Créer votre compte</a>
+                        <a href="/inscription" class="text-warning">Créer votre compte</a>
                     </div>
                 </form>
             </div>

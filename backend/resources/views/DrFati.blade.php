@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<br>
 <head>
     <meta charset="utf-8">
     <title>H&F clinique dentaire</title>
@@ -9,7 +8,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,16 +19,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -73,7 +72,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -81,21 +80,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link ">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="/" class="nav-item nav-link ">Accueil</a>
+                <a href="/about" class="nav-item nav-link">A propos</a>
+                <a href="/service" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="Actualite.html" class="dropdown-item">Actualités</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="/team" class="dropdown-item">Profils Médecins</a>
+                        <a href="/appointment" class="dropdown-item">Rendez-vous</a>
+                        <a href="/actualite" class="dropdown-item">Actualités</a>
+                        <a href="/ressources" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="connexion.html" class="nav-item nav-link">Connexion</a>
+                <a href="/connexion" class="nav-item nav-link">Connexion</a>
             </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <a href="/appointment" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -109,7 +108,7 @@
                 <div class="card border-0 shadow">
                     <!-- Image -->
                     <div class="text-center mt-4">
-                        <a href="team.html"> <img src="img/fati.jpg" alt="Dr. fati" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                        <a href="/team"> <img src="{{ asset('assets/images/fati.jpg') }}" alt="Dr. fati" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
                         </a>
                        </div>
                     <!-- Details -->
@@ -216,9 +215,9 @@ En dehors du cabinet, Dr. Fatimaezzahra Kabiri est passionné(e) par [mentionner
             <div class="col-lg-3 col-md-6">
                 <h3 class="text-white mb-4">Liens</h3>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                    <a class="text-light mb-2" href="/"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                    <a class="text-light mb-2" href="/about"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                    <a class="text-light mb-2" href="/service"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
                     <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
                     <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                 </div>
@@ -266,18 +265,18 @@ En dehors du cabinet, Dr. Fatimaezzahra Kabiri est passionné(e) par [mentionner
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
 
 </html>

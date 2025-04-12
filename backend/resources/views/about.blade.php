@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<br>
 <head>
     <meta charset="utf-8">
     <title>H&F clinique dentaire</title>
@@ -73,7 +72,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -81,21 +80,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link ">Accueil</a>
-                <a href="about.html" class="nav-item nav-link active">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="/" class="nav-item nav-link ">Accueil</a>
+                <a href="/about" class="nav-item nav-link active">A propos</a>
+                <a href="/service" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="Actualite.html" class="dropdown-item">Actualités</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="/team" class="dropdown-item">Profils Médecins</a>
+                        <a href="/appointment" class="dropdown-item">Rendez-vous</a>
+                        <a href="/actualite" class="dropdown-item">Actualités</a>
+                        <a href="/ressources" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="connexion.html" class="nav-item nav-link">Connexion</a>
+                <a href="/connexion" class="nav-item nav-link">Connexion</a>
             </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <a href="/appointment" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -174,7 +173,7 @@
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Innovation</h5>
                         </div>
                     </div>
-                    <a href="appointment.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn text-center" data-wow-delay="0.6s">Prendre un rendez-vous</a>
+                    <a href="/appointment" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn text-center" data-wow-delay="0.6s">Prendre un rendez-vous</a>
                 </div>
             </div>
         </div>
@@ -291,10 +290,10 @@
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Liens</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                        <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                        <a class="text-light mb-2" href="Actualite.html"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
+                        <a class="text-light mb-2" href="/"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="/about"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="/service"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light mb-2" href="/actualite"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
                     </div>
                 </div>
                
