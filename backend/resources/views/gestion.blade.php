@@ -131,7 +131,7 @@
                 
                 <a href="gestion.html" class="nav-item nav-link ">Gestion des utilisateurs</a>
 
-                <a href="connexion.html"  class="nav-item nav-link active">Déconnexion</a>    
+                <a href="/connexion"  class="nav-item nav-link active">Déconnexion</a>    
                
            
         </div>

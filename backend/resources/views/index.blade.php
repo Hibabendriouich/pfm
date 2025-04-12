@@ -72,7 +72,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="/" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -80,21 +80,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="/" class="nav-item nav-link active">Accueil</a>
+                <a href="/about" class="nav-item nav-link">A propos</a>
+                <a href="/service" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="Actualite.html" class="dropdown-item">Actualités</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="/team" class="dropdown-item">Profils Médecins</a>
+                        <a href="/appointment" class="dropdown-item">Rendez-vous</a>
+                        <a href="/actualite" class="dropdown-item">Actualités</a>
+                        <a href="/ressources" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="connexion.html" class="nav-item nav-link">Connexion</a>
+                <a href="/connexion" class="nav-item nav-link">Connexion</a>
             </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <a href="/appointment" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -111,7 +111,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">L’art de soigner, la science du sourire.</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Préserver votre santé bucco-dentaire, embellir votre sourire.</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
+                            <a href="/appointment" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
                             <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
                         </div>
                     </div>
@@ -122,7 +122,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Des dents saines, un avenir radieux.</h5>
                             <h1 class="display-1 text-white mb-md-4 animated zoomIn">Souriez sans limite grâce à nos soins d’excellence.</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
+                            <a href="/appointment" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
                             <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
                         </div>
                     </div>
@@ -159,7 +159,7 @@
                             <p class="mb-0"> 10h00 - 16h00 </p>
                         </div>
                         <br>
-                        <a class="btn btn-light" href="appointment.html">Prendre rendez-vous</a>
+                        <a class="btn btn-light" href="/appointment">Prendre rendez-vous</a>
                     </div>
                 </div>
                 <div class="col-lg-4 wow zoomIn " data-wow-delay="0.3s">
@@ -178,10 +178,10 @@
                         
                         <select id="service-select" class="form-select bg-light border-0" style="height: 55px;">
                             <option selected value="">Selectionnez un service</option>
-                            <option value="service1.html">Dentisterie générale</option>
-                            <option value="service2.html">Pédodontie</option> 
-                            <option value="service3.html">Orthodontie</option>
-                            <option value="service4.html">Chirurgie dentaire</option>
+                            <option value="/service1">Dentisterie générale</option>
+                            <option value="/service2">Pédodontie</option> 
+                            <option value="/service3">Orthodontie</option>
+                            <option value="/service4">Chirurgie dentaire</option>
                         </select>
                         <br>
                         <button id="search-btn" class="btn btn-light">Chercher</button>
@@ -223,7 +223,7 @@
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Prix imbattables</h5>
                         </div>
                     </div>
-                    <a href="appointment.html" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Prendre un rendez-vous</a>
+                    <a href="/appointment" class="btn btn-primary py-3 px-5 mt-4 wow zoomIn" data-wow-delay="0.6s">Prendre un rendez-vous</a>
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
@@ -327,10 +327,10 @@
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Liens</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                        <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                        <a class="text-light mb-2" href="Actualite.html"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
+                        <a class="text-light mb-2" href="/"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="/about"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="/service"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light mb-2" href="/actualite"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
                     </div>
                 </div>
                
