@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<br>
 <head>
     <meta charset="utf-8">
     <title>H&F clinique dentaire</title>
@@ -9,7 +8,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,17 +19,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -108,7 +106,7 @@
         <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <img class="w-100" src="{{ asset('assets/images/carousel-1.jpg') }}" alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">L’art de soigner, la science du sourire.</h5>
@@ -119,7 +117,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
+                    <img class="w-100" src="{{ asset('assets/images/carousel-2.jpg ') }}"alt="Image">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
                             <h5 class="text-white text-uppercase mb-3 animated slideInDown">Des dents saines, un avenir radieux.</h5>
@@ -229,7 +227,7 @@
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('assets/images/about.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -267,13 +265,13 @@
                 <div class="col-lg-7">
                     <div class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">
                         <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto rounded mb-4" src="img/icho.jpeg" alt="">
+                            <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/icho.jpeg') }}" alt="">
                             <p class="fs-5">Une clinique que je vous recommande,tout y est la gentillesse la politesse le respect et des soins de qualité j’ajouterais que les médecins sont très à l’écoute, ils explique tous leurs gestes, de bonnes conditions d’hygiène, ainsi que d’excellent résultat après chaque traitement, je vous souhaite une très bonne continuation et plein de réussite.</p>
                             <hr class="mx-auto w-25">
                             <h4 class="text-white mb-0">R.Ichou</h4>
                         </div>
                         <div class="testimonial-item text-center text-white">
-                            <img class="img-fluid mx-auto rounded mb-4" src="img/testimonial-1.jpg" alt="">
+                            <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/testimonial-1.jpg') }}" alt="">
                             <p class="fs-5">J étais honorée de faire partie des premiers patients de la clinique. Une équipe jeune compétente et très chaleureuse..un travail de professionnel et un sens de détail hors du commun. Mes profonds remerciements à Dr Jaafari pour son excellent travail..très bonne continuation.</p>
                             <hr class="mx-auto w-25">
                             <h4 class="text-white mb-0">Sanae</h4>
@@ -375,21 +373,20 @@
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-    
+    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
+
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
     <script>
         $(document).ready(function(){
             $('.testimonial-carousel').owlCarousel({

@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,16 +20,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -139,7 +139,7 @@
                 </div>
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/historique.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('assets/images/historique.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -153,7 +153,7 @@
                 <!-- Image on the left -->
                 <div class="col-lg-5" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="img/mission.jpg" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100 rounded wow zoomIn" data-wow-delay="0.9s" src="{{ asset('assets/images/mission.jpg') }}" style="object-fit: cover;">
                     </div>
                 </div>
                 <!-- Text on the right -->
@@ -193,49 +193,49 @@
                 <div class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">
                     <div class="testimonial-item text-center text-white">
                         <h1>Pédodentiste</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/about.jpg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/about.jpg') }}" alt="">
                         <p class="fs-5">Spécialiste en soins dentaires pédiatriques, Dr. Mourtaday veille à offrir une expérience rassurante et adaptée aux enfants. Avec patience et expertise, elle aide les plus jeunes à adopter de bonnes habitudes d’hygiène bucco-dentaire tout en assurant des soins de qualité.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Dr. Amira Mourtaday</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Dentiste chirurgien</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/oubeid.webp" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/oubeid.webp') }}" alt="">
                         <p class="fs-5">Expert en chirurgie dentaire, Dr. Oubeid se spécialise dans les interventions complexes, telles que les implants et extractions. Avec une précision exceptionnelle, il assure des soins chirurgicaux modernes et personnalisés pour restaurer les sourires.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Dr. Oubeid Allah Hlal</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Dentiste généraliste</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/fati.jpg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/fati.jpg') }}" alt="">
                         <p class="fs-5">Passionnée par la santé bucco-dentaire globale, Dr. Kabiri accompagne ses patients avec attention et savoir-faire. Elle est dédiée à la prévention, au diagnostic et au traitement des besoins dentaires courants.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Dr. Fatimaezzahra Kabiri</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Orthodontiste</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/mansouri.jpeg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/mansouri.jpeg') }}" alt="">
                         <p class="fs-5">Spécialiste de l’alignement dentaire, Dr. Mansouri transforme les sourires avec des traitements orthodontiques personnalisés. Grâce à des techniques modernes, elle aide ses patients à retrouver une harmonie esthétique et fonctionnelle.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Dr. Siham Mansouri</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Infirmier spécialisé en santé bucco-dentaire</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/alami.jpg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/alami.jpg') }}" alt="">
                         <p class="fs-5">Collaborant étroitement avec les dentistes, Mohcine assure le suivi des traitements dentaires et conseille les patients pour préserver leur santé bucco-dentaire.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Mohcine Alami</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Infirmière en bloc opératoire</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/idrissi.jpeg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/idrissi.jpeg') }}" alt="">
                         <p class="fs-5">Spécialisée dans l’assistance chirurgicale, Lamiae joue un rôle clé dans la préparation des interventions, veillant à un environnement opératoire sûr et efficace.</p>
                         <hr class="mx-auto w-25">
                         <h4 class="text-white mb-0">Lamiae Idrissi</h4>
                     </div>
                     <div class="testimonial-item text-center text-white">
                         <h1>Co-Fondaterices de H&F</h1>
-                        <img class="img-fluid mx-auto rounded mb-4" src="img/Fati.jpeg" alt="">
+                        <img class="img-fluid mx-auto rounded mb-4" src="{{ asset('assets/images/Fati.jpeg') }}" alt="">
                         <p class="fs-5">
                             Visionnaires et passionnées, Hiba et Fati ont fondé la clinique avec l’ambition de redéfinir les standards des soins dentaires. Leur complémentarité, entre expertise médicale et gestion innovante, garantit une expérience centrée sur le bien-être des patients et une qualité de service inégalée. Leur leadership inspire toute l’équipe à viser l’excellence chaque jour.</p>
                         <hr class="mx-auto w-25">
@@ -340,18 +340,18 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    <script src="{{ asset('assets/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('assets/lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <!--Carousel staff-->
     <script>
