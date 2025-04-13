@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-<br>
 <head>
     <meta charset="utf-8">
     <title>H&F clinique dentaire</title>
@@ -12,7 +8,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -23,16 +19,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -50,7 +46,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
@@ -62,10 +57,10 @@
             <div class="col-md-6 text-center text-lg-end">
                 <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
                     <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2" ></i><a href="mailto:H&F@gmail.com" style="color: white;">H&F@gmail.com</a></p>
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i><a href="mailto:H&F@gmail.com" style="color: white;">H&F@gmail.com</a></p>
                     </div>
                     <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2" ></i><a href="tel:+212 534999999" style="color: white;">+212 534999999</a></p>
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i><a href="tel:+212 534999999" style="color: white;">+212 534999999</a></p>
                     </div>
                 </div>
             </div>
@@ -73,10 +68,9 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="{{ '/' }}" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -84,27 +78,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="{{ '/' }}" class="nav-item nav-link active">Accueil</a>
+                <a href="{{ '/about' }}" class="nav-item nav-link">A propos</a>
+                <a href="{{ '/service' }}" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Tarifs</a>
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="Témoignages.html" class="dropdown-item">Témoignages</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="{{ '/team' }}" class="dropdown-item">Profils Médecins</a>
+                        <a href="{{ '/temoignages' }}" class="dropdown-item">Témoignages</a>
+                        <a href="{{ '/appointment' }}" class="dropdown-item">Rendez-vous</a>
+                        <a href="{{ route('ressources') }}" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="{{ '/connexion' }}" class="nav-item nav-link">Connexion</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <a href="{{ '/appointment' }}" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
-
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -124,36 +116,35 @@
     </div>
     <!-- Full Screen Search End -->
 
-<!-- Hero Start -->
-<div class="container-fluid bg-primary py-5 hero-header mb-5">
-    <div class="row py-3">
-        <div class="col-12 text-center">
-            <h1 class="display-3 text-white animated zoomIn">Médecins disponibles</h1>
-            
-        </div>
-    </div>
-</div>
-<!-- Hero End -->
-<!-- Offer Start -->
-<div class="container-fluid bg-offer my-5 py-5 wow fadeInUp" data-wow-delay="0.1s" id="act">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-7 wow zoomIn" data-wow-delay="0.6s">
-                <div class="offer-text text-center rounded p-5">
-                    <h1 class="display-5 text-white">Dr. Amira Mourtaday</h1>
-                    <h3><strong><u>Pédodontiste</u></strong></h3>
-                    <img src="./img/about.jpg"/ style="height: 300px; width: 300px">
-                        <br><strong style="color: rgba(255, 255, 255, 0.85);">Prenez soin de votre santé aujourd'hui pour un meilleur avenir.</strong></p>
-                        <div class="button-container">
-                            <a href="tel:+212 534999999" class="btn btn-dark py-3 px-5 text-center">Appelez-nous</a>
-                        </div>                    </div>
+    <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Médecins disponibles</h1>
             </div>
         </div>
     </div>
-</div>
-<!-- Offer End -->
+    <!-- Hero End -->
 
-
+    <!-- Offer Start -->
+    <div class="container-fluid bg-offer my-5 py-5 wow fadeInUp" data-wow-delay="0.1s" id="act">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="offer-text text-center rounded p-5">
+                        <h1 class="display-5 text-white">Dr. Amira Mourtaday</h1>
+                        <h3><strong><u>Pédodontiste</u></strong></h3>
+                        <img src="{{ asset('assets/images/about.jpg') }}" style="height: 300px; width: 300px">
+                        <br><strong style="color: rgba(255, 255, 255, 0.85);">Prenez soin de votre santé aujourd'hui pour un meilleur avenir.</strong></p>
+                        <div class="button-container">
+                            <a href="tel:+212 534999999" class="btn btn-dark py-3 px-5 text-center">Appelez-nous</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Offer End -->
 
     <!-- Newsletter Start -->
     <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
@@ -170,7 +161,6 @@
     </div>
     <!-- Newsletter End -->
     
-
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
         <div class="container pt-5">
@@ -178,11 +168,10 @@
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Liens</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                        <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light mb-2" href="{{ '/' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="{{ '/about' }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="{{ '/service' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
                         <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
-                        <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                     </div>
                 </div>
                
@@ -214,32 +203,28 @@
                 <div class="col-md-12 text-center text-md-start">
                    <marquee> <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">H&F</a>. Tous droits resérvés.</p></marquee>
                 </div>
-                
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 </body>
-
 </html>

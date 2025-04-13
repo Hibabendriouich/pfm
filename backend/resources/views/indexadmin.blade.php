@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>H&F clinique dentaire</title>
+    <title>H&F clinique dentaire - Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,28 +19,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    
+    <!-- SB Admin 2 Styles -->
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+    
     <style>
-       
-
-        
-
         .calendar-title {
             font-size: 2em;
             margin-bottom: 15px;
@@ -78,9 +73,7 @@
         }
 
         .calendar-day.event {
-            
             color: #007bff;
-
         }
 
         .calendar-day.blue {
@@ -115,11 +108,10 @@
             align-items: center;
             position: relative;
         }
-        
     </style>
 </head>
 
-<body>
+<body id="page-top">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary m-1" role="status">
@@ -134,7 +126,6 @@
     </div>
     <!-- Spinner End -->
 
-
     <!-- Topbar Start -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
@@ -146,10 +137,10 @@
             <div class="col-md-6 text-center text-lg-end">
                 <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
                     <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2" ></i><a href="mailto:H&F@gmail.com" style="color: white;">H&F@gmail.com</a></p>
+                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i><a href="mailto:H&F@gmail.com" style="color: white;">H&F@gmail.com</a></p>
                     </div>
                     <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2" ></i><a href="tel:+212 534999999" style="color: white;">+212 534999999</a></p>
+                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i><a href="tel:+212 534999999" style="color: white;">+212 534999999</a></p>
                     </div>
                 </div>
             </div>
@@ -157,75 +148,23 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        
-        <a href="index1.html" class="navbar-brand p-0">
+        <a href="{{ '/' }}" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index1.html" class="nav-item nav-link">Accueil</a>
-                
-                <a href="gestion.html" class="nav-item nav-link ">Gestion des utilisateurs</a>
-
-                <a href="connexion.html"  class="nav-item nav-link active">Déconnexion</a>     
-               
-              
-           
+                <a href="{{ '/' }}" class="nav-item nav-link">Accueil</a>
+                <a href="{{ '/gestion' }}" class="nav-item nav-link">Gestion des utilisateurs</a>
+                <a href="{{ '/connexion' }}" class="nav-item nav-link active">Déconnexion</a>
+            </div>
         </div>
-    
     </nav>
     <!-- Navbar End -->
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0">
-        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">L’art de soigner, la science du sourire.</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Préserver votre santé bucco-dentaire, embellir votre sourire.</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
-                            <a href="" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                        <div class="p-3" style="max-width: 900px;">
-                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Des dents saines, un avenir radieux.</h5>
-                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Souriez sans limite grâce à nos soins d’excellence.</h1>
-                            <a href="appointment.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Prendre rendez-vous</a>
-                            <a href="#contact" class="btn btn-secondary py-md-3 px-md-5 animated slideInRight">Contactez-nous</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <!-- Carousel End -->
-
-
-    <br><br><br><br>
-
 
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -323,15 +262,9 @@
         </div>
 
         <!-- Content Row -->
-
         <div class="row">
-
-                    
-      
-
             <!-- Content Column -->
             <div class="col-lg-6 mb-4" style="margin-left: 370px;">
-
                 <!-- Project Card Example -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
@@ -369,21 +302,14 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
-
     </div>
     <!-- /.container-fluid -->
 
-</div>
-<!-- End of Main Content -->
-
-        
     <!--Calendrier-->
     <br><br>
-    <h1 class="position-relative  text-primary text-uppercase" align="center">Calandrier des évènements:</h1>
+    <h1 class="position-relative text-primary text-uppercase" align="center">Calendrier des évènements:</h1>
     
     <div class="container py-5">
         <div class="row justify-content-center">
@@ -403,7 +329,7 @@
                                     <div class="calendar-day blue">Ven</div>
                                     <div class="calendar-day blue">Sam</div>
                                     <!-- December Days -->
-                                    <div class="calendar-day"></div> <!-- Empty space for 1st of Dec -->
+                                    <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
@@ -458,7 +384,7 @@
                                     <div class="calendar-day blue">Ven</div>
                                     <div class="calendar-day blue">Sam</div>
                                     <!-- January Days -->
-                                    <div class="calendar-day"></div> <!-- Empty space for 1st of Jan -->
+                                    <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
@@ -505,7 +431,7 @@
                                     <div class="calendar-day blue">Ven</div>
                                     <div class="calendar-day blue">Sam</div>
                                     <!-- February Days -->
-                                    <div class="calendar-day"></div> <!-- Empty space for 1st of Feb -->
+                                    <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day"></div>
                                     <div class="calendar-day blue" onclick="showEvent('3 February 2025: International Conference on Dentistry and Dental Materials')">3</div>
@@ -537,7 +463,6 @@
                                 </div>
                             </div>
                         </div>
-            
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#calendarCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -552,107 +477,104 @@
         </div>
     </div>
 
-<!-- Newsletter Start -->
-<div class="container-fluid position-relative pt-5 wow fadeInUp" id="news" data-wow-delay="0.1s" style="z-index: 1;">
-    <div class="container">
-        <div class="bg-primary p-5">
-            <form class="mx-auto" style="max-width: 600px;">
-                <div class="input-group">
-                    <input type="text" id="email" class="form-control border-white p-3" placeholder="Entrez votre adresse email">
-                    <button id="ins" class="btn btn-dark px-4">S'inscrire</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- Newsletter End -->
-
-
-<!-- Footer Start -->
-<div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
-    <div class="container pt-5">
-        <div class="row g-5 pt-4">
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Liens</h3>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                    <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
-                </div>
-            </div>
-           
-            <div class="col-lg-3 col-md-6">
-                <h3 id="contact" class="text-white mb-4">Contactez-nous</h3>
-                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Targa, Marrakech, Maroc</p>
-                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><a href="mailto:H&F@gmail.com">H&F@gmail.com</a></p>
-                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+212 534999999">+212 534999999</a></p>
-            </div>
-           
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Abonnez-vous</h3>
-                <div class="d-flex">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13585.387078358628!2d-8.064703344851338!3d31.651731286461892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafebf94c148897%3A0x61b347810296585!2sClinique%20Le%20Marrakech!5e0!3m2!1sfr!2sma!4v1734200343470!5m2!1sfr!2sma" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Newsletter Start -->
+    <div class="container-fluid position-relative pt-5 wow fadeInUp" id="news" data-wow-delay="0.1s" style="z-index: 1;">
+        <div class="container">
+            <div class="bg-primary p-5">
+                <form class="mx-auto" style="max-width: 600px;">
+                    <div class="input-group">
+                        <input type="text" id="email" class="form-control border-white p-3" placeholder="Entrez votre adresse email">
+                        <button id="ins" class="btn btn-dark px-4">S'inscrire</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid text-light py-4" style="background: #051225;">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-12 text-center text-md-start">
-               <marquee> <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">H&F</a>. Tous droits resérvés.</p></marquee>
+    <!-- Newsletter End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
+        <div class="container pt-5">
+            <div class="row g-5 pt-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Liens</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="{{ '/' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="{{ '/about' }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="{{ '/service' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 col-md-6">
+                    <h3 id="contact" class="text-white mb-4">Contactez-nous</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Targa, Marrakech, Maroc</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><a href="mailto:H&F@gmail.com">H&F@gmail.com</a></p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+212 534999999">+212 534999999</a></p>
+                </div>
+               
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Abonnez-vous</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13585.387078358628!2d-8.064703344851338!3d31.651731286461892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafebf94c148897%3A0x61b347810296585!2sClinique%20Le%20Marrakech!5e0!3m2!1sfr!2sma!4v1734200343470!5m2!1sfr!2sma" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
-            
         </div>
     </div>
-</div>
-<!-- Footer End -->
-
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-12 text-center text-md-start">
+                   <marquee><p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">H&F</a>. Tous droits resérvés.</p></marquee>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-
+    <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+    
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
+    
     <!-- Custom JS to show alert on date click -->
     <script>
         function showEvent(eventDetails) {
@@ -660,5 +582,4 @@
         }
     </script>
 </body>
-
 </html>

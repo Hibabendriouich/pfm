@@ -127,9 +127,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="indexadmin.html" class="nav-item nav-link">Accueil</a>
+                <a href="/indexadmin" class="nav-item nav-link">Accueil</a>
                 
-                <a href="gestion.html" class="nav-item nav-link ">Gestion des utilisateurs</a>
+                <a href="/gestion" class="nav-item nav-link ">Gestion des utilisateurs</a>
 
                 <a href="/connexion"  class="nav-item nav-link active">Déconnexion</a>    
                

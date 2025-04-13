@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Patient</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>H&F clinique dentaire</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -21,16 +19,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
     <style>
         body {
             background-color: #f8f9fa;
@@ -122,9 +121,9 @@
     
 </head>
 <body>
-      <!-- Navbar Start -->
-      <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+     <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="{{ '/' }}" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -132,24 +131,22 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="{{ '/' }}" class="nav-item nav-link active">Accueil</a>
+                <a href="{{ '/about' }}" class="nav-item nav-link">A propos</a>
+                <a href="{{ '/service' }}" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="price.html" class="dropdown-item">Tarifs</a>
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="#avis" class="dropdown-item">Témoignages</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="Actualite.html" class="dropdown-item">Actualités</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="{{ '/team' }}" class="dropdown-item">Profils Médecins</a>
+                        <a href="{{ '/temoignage' }}" class="dropdown-item">Témoignages</a>
+                        <a href="{{ '/appointment' }}" class="dropdown-item">Rendez-vous</a>
+                        <a href="{{ '/ressources' }}" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
+                <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="connexion.html"  class="nav-item nav-link active">Déconnexion</a>     
-
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+            <a href="{{ '/appointment' }}" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -166,53 +163,51 @@
     </div>
     
  <!-- Footer Start -->
- <div class="container-fluid bg-dark text-light mt-5 py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
-    <div class="container pt-5">
-        <div class="row g-5 pt-4">
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Liens</h3>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                    <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                    <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                    <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
-                    <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+ <div class="container-fluid bg-dark text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="margin-top: -75px;">
+        <div class="container pt-5">
+            <div class="row g-5 pt-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Liens</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="{{ '/' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="{{ '/about' }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="{{ '/service' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light" href="{{ route('contact') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                    </div>
                 </div>
-            </div>
-           
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Contactez-nous</h3>
-                <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Targa, Marrakech, Maroc</p>
-                <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><a href="mailto:H&F@gmail.com">H&F@gmail.com</a></p>
-                <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+212 534999999">+212 534999999</a></p>
-            </div>
-           
-            <div class="col-lg-3 col-md-6">
-                <h3 class="text-white mb-4">Abonnez-vous</h3>
-                <div class="d-flex">
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+               
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Contactez-nous</h3>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Targa, Marrakech, Maroc</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><a href="mailto:H&F@gmail.com">H&F@gmail.com</a></p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i><a href="tel:+212 534999999">+212 534999999</a></p>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13585.387078358628!2d-8.064703344851338!3d31.651731286461892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafebf94c148897%3A0x61b347810296585!2sClinique%20Le%20Marrakech!5e0!3m2!1sfr!2sma!4v1734200343470!5m2!1sfr!2sma" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-white mb-4">Abonnez-vous</h3>
+                    <div class="d-flex">
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://fr.linkedin.com/"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://www.instagram.com/"><i class="fab fa-instagram fw-normal"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13585.387078358628!2d-8.064703344851338!3d31.651731286461892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafebf94c148897%3A0x61b347810296585!2sClinique%20Le%20Marrakech!5e0!3m2!1sfr!2sma!4v1734200343470!5m2!1sfr!2sma" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid text-light py-4" style="background: #051225;">
-    <div class="container">
-        <div class="row g-0">
-            <div class="col-md-12 text-center text-md-start">
-               <marquee> <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">H&F</a>. Tous droits resérvés.</p></marquee>
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-12 text-center text-md-start">
+                   <marquee> <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">H&F</a>. Tous droits resérvés.</p></marquee>
+                </div>
             </div>
-            
         </div>
     </div>
-</div>
-<!-- Footer End -->
+    <!-- Footer End -->
     <script>
         // Fonction pour afficher les informations dans le profil
         function afficherProfil() {

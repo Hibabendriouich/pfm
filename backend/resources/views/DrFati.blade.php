@@ -219,7 +219,7 @@ En dehors du cabinet, Dr. Fatimaezzahra Kabiri est passionné(e) par [mentionner
                     <a class="text-light mb-2" href="/about"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
                     <a class="text-light mb-2" href="/service"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
                     <a class="text-light mb-2" href="#act"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
-                    <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                    <a class="text-light" href="'/connexion'"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                 </div>
             </div>
            

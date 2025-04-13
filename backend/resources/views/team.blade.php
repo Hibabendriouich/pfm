@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<br>
 <head>
     <meta charset="utf-8">
     <title>H&F clinique dentaire</title>
@@ -9,7 +8,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('assets/images/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,16 +19,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/lib/twentytwenty/twentytwenty.css') }}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -73,7 +72,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0">
+        <a href="{{ '/' }}" class="navbar-brand p-0">
             <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>H&F</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -81,21 +80,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link ">Accueil</a>
-                <a href="about.html" class="nav-item nav-link">A propos</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
+                <a href="{{ '/' }}" class="nav-item nav-link">Accueil</a>
+                <a href="{{ '/about' }}" class="nav-item nav-link">A propos</a>
+                <a href="{{ '/service' }}" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" >Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="team.html" class="dropdown-item">Profils Médecins</a>
-                        <a href="appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="Actualite.html" class="dropdown-item">Actualités</a>
-                        <a href="ressources.html" class="dropdown-item">Ressources utiles</a>
+                        <a href="{{ '/team' }}" class="dropdown-item">Profils Médecins</a>
+                        <a href="{{ '/appointment' }}" class="dropdown-item">Rendez-vous</a>
+                        <a href="{{ '/actualite' }}" class="dropdown-item">Actualités</a>
+                        <a href="{{ '/ressources' }}" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="connexion.html" class="nav-item nav-link">Connexion</a>
+                <a href="{{ '/connexion' }}" class="nav-item nav-link">Connexion</a>
             </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
+            <a href="{{ '/appointment' }}" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -127,7 +126,7 @@
                 <div class="col-lg-3 wow slideInUp" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="position-relative rounded-top" style="z-index: 1;">
-                            <img class="img-fluid rounded-top w-100" src="img/oubeid.webp" alt="">
+                            <img class="img-fluid rounded-top w-100" src="{{ asset('assets/images/oubeid.webp') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                                 <a class="btn btn-primary btn-square m-1" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square m-1" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -140,7 +139,7 @@
                             <p class="text-primary mb-0">Dentiste chirurgien</p>
                             <br>
                             <div class="d-flex justify-content-center">
-                               <a href="Dr.oubeid.html"> <button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
+                               <a href="/oubeid"> <button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
                             </div>
                         </div>
                     </div>
@@ -148,7 +147,7 @@
                 <div class="col-lg-3 wow slideInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="position-relative rounded-top" style="z-index: 1;">
-                            <img class="img-fluid rounded-top w-100 " src="img/about.jpg" alt="">
+                            <img class="img-fluid rounded-top w-100 " src="{{ asset('assets/images/about.jpg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                                 <a class="btn btn-primary btn-square m-1" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square m-1" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -161,7 +160,7 @@
                             <p class="text-primary mb-0">Pédodentiste</p>
                             <br>
                             <div class="d-flex justify-content-center">
-                                <a href="Dr. amira.html"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
+                                <a href="/amira"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
                             </div>
                         </div>
                     </div>
@@ -169,7 +168,7 @@
                 <div class="col-lg-3 wow slideInUp" data-wow-delay="0.6s">
                     <div class="team-item">
                         <div class="position-relative rounded-top" style="z-index: 1;">
-                            <img class="img-fluid rounded-top w-100" src="img/fati.jpg" alt="">
+                            <img class="img-fluid rounded-top w-100" src="{{ asset('assets/images/fati.jpg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                                 <a class="btn btn-primary btn-square m-1" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square m-1" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -182,7 +181,7 @@
                             <p class="text-primary mb-0">Dentiste généraliste</p>
                             <br>
                             <div class="d-flex justify-content-center">
-                                <a href="Dr. fati.html"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
+                                <a href="/fati"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
                             </div>
                         </div>
                     </div>
@@ -190,7 +189,7 @@
                 <div class="col-lg-3 wow slideInUp" data-wow-delay="0.3s">
                     <div class="team-item">
                         <div class="position-relative rounded-top" style="z-index: 1;">
-                            <img class="img-fluid rounded-top w-100 " src="img/mansouri.jpeg" alt="">
+                            <img class="img-fluid rounded-top w-100 " src="{{ asset('assets/images/mansouri.jpeg') }}" alt="">
                             <div class="position-absolute top-100 start-50 translate-middle bg-light rounded p-2 d-flex">
                                 <a class="btn btn-primary btn-square m-1" href="https://x.com/?lang=fr"><i class="fab fa-twitter fw-normal"></i></a>
                                 <a class="btn btn-primary btn-square m-1" href="https://www.facebook.com/?locale=fr_FR"><i class="fab fa-facebook-f fw-normal"></i></a>
@@ -203,7 +202,7 @@
                             <p class="text-primary mb-0">Orthodontiste</p>
                             <br>
                             <div class="d-flex justify-content-center">
-                                <a href="Dr.siham.html"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
+                                <a href="/siham"><button type="button" class="btn btn-primary rounded-pill">voir plus</button></a>
                             </div>
                         </div>
                     </div>
@@ -255,10 +254,10 @@
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Liens</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
-                        <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
-                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                        <a class="text-light mb-2" href="Actualite.html"bi bi-arrow-right text-primary me-2"></i>Actualités</a>
+                        <a class="text-light mb-2" href="{{ '/' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
+                        <a class="text-light mb-2" href="{{ '/about' }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
+                        <a class="text-light mb-2" href="{{ '/service' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
+                        <a class="text-light mb-2" href="{{ '/actualite' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Actualités</a>
                     </div>
                 </div>
                
@@ -304,37 +303,37 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+    <script src="{{ asset('lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
+    <script src="{{ asset('lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.event.move.js') }}"></script>
+    <script src="{{ asset('lib/twentytwenty/jquery.twentytwenty.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js">
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script>
      document.getElementById("newsletter-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Empêche l'envoi du formulaire
+        e.preventDefault(); // Empêche l'envoi du formulaire
 
-    const email = document.getElementById("email").value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex pour valider l'email
+        const email = document.getElementById("email").value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Regex pour valider l'email
 
-    const popupMessage = document.getElementById("popupMessage");
+        const popupMessage = document.getElementById("popupMessage");
 
-    if (!emailRegex.test(email)) {
-        popupMessage.textContent = "Veuillez entrer une adresse e-mail valide.";
-    } else {
-        popupMessage.textContent = " Restez connecté(e) pour notre prochaine newsletter pleine de contenu intéressant, d'astuces et d'offres !";
-    }
+        if (!emailRegex.test(email)) {
+            popupMessage.textContent = "Veuillez entrer une adresse e-mail valide.";
+        } else {
+            popupMessage.textContent = " Restez connecté(e) pour notre prochaine newsletter pleine de contenu intéressant, d'astuces et d'offres !";
+        }
 
-    // Afficher la modal
-    const popupModal = new bootstrap.Modal(document.getElementById('popupModal'));
-    popupModal.show();
-});
+        // Afficher la modal
+        const popupModal = new bootstrap.Modal(document.getElementById('popupModal'));
+        popupModal.show();
+    });
     </script>
 </body>
-
 </html>

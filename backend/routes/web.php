@@ -60,3 +60,15 @@ Route::get('/service3', function () {
 Route::get('/service4', function () {
     return view('service4');
 });
+Route::get('/oubeid', function () {
+    return view('DrOubeid');
+});
+Route::get('/amira', function () {
+    return view('DrAmira');
+});
+Route::get('/fati', function () {
+    return view('DrFati');
+});
+Route::get('/siham', function () {
+    return view('DrSiham');
+});

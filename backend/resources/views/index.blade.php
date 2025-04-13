@@ -334,7 +334,7 @@
                     </div>
                 </div>
                
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6" id="contact">
                     <h3 class="text-white mb-4">Contactez-nous</h3>
                     <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>123 Targa, Marrakech, Maroc</p>
                     <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i><a href="mailto:H&F@gmail.com">H&F@gmail.com</a></p>
