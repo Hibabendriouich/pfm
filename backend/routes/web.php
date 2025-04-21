@@ -10,9 +10,6 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/service', function () {
-    return view('service');
-});
 
 Route::get('/team', function () {
     return view('team');
@@ -39,7 +36,7 @@ Route::get('/connexion', function () {
 Route::get('/inscription', function () {
     return view('inscription');
 });
-Route::get('/indexAdmin', function () {
+Route::get('/indexadmin', function () {
     return view('indexadmin');
 });
 Route::get('/profil', function () {
@@ -72,3 +69,9 @@ Route::get('/fati', function () {
 Route::get('/siham', function () {
     return view('DrSiham');
 });
+Route::get('/contact', function () {
+    return view('contact');
+});
+use App\Http\Controllers\RdvController;
+
+Route::post('/rdv/store', [RdvController::class, 'store'])->name('rdv.store');

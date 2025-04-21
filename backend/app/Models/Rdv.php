@@ -6,6 +6,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rdv extends Model
 {
+    protected $fillable = [
+        'date',    
+        'heure', 
+        'service',  
+        'nom',  
+        'telephone',  
+    ];
+    
     public function cabinets()
     {
         return $this->belongsTo(Cabinet::class);

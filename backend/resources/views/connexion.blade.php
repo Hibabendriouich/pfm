@@ -57,12 +57,12 @@
                 <h1 class="text-primary text-center mb-4">Espace Administrateur</h1>
                 <form action="#" id="adminForm">
                     <div class="mb-3">
-                        <label for="adminEmail" class="form-label">Identifiant:</label>
-                        <input type="text" id="adminEmail" class="form-control" placeholder="Ex: admin" required>
+                        <label for="adminEmail" class="form-label" name="name" >Identifiant:</label>
+                        <input type="text" id="adminEmail" name="email" class="form-control" placeholder="Ex: admin" required>
                     </div>
                     <div class="mb-3">
                         <label for="adminPassword" class="form-label">Mot de passe:</label>
-                        <input type="password" id="adminPassword" class="form-control" placeholder="Entrez votre mot de passe" required>
+                        <input type="password" id="adminPassword" name="password" class="form-control" placeholder="Entrez votre mot de passe" required>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-primary">Connexion</button>
@@ -81,11 +81,11 @@
                 <form action="#" id="participantForm">
                     <div class="mb-3">
                         <label for="participantEmail" class="form-label">Identifiant:</label>
-                        <input type="text" id="participantEmail" class="form-control" placeholder="Ex: patient" required>
+                        <input type="text" id="participantEmail" name="email" class="form-control" placeholder="Ex: patient" required >
                     </div>
                     <div class="mb-3">
                         <label for="participantPassword" class="form-label">Mot de passe:</label>
-                        <input type="password" id="participantPassword" class="form-control" placeholder="Entrez votre mot de passe" required>
+                        <input type="password" id="participantPassword" name="password" class="form-control" placeholder="Entrez votre mot de passe" required>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-light">Connexion</button>
@@ -113,7 +113,7 @@
 
             // Vérification des identifiants pour l'admin
             if (email === 'admin' && password === '123') {
-                window.location.href = 'indexadmin.html'; // Page Admin
+                window.location.href = '/indexadmin'; // Page Admin
             } else {
                 alert('Identifiants incorrects');
             }
@@ -127,7 +127,7 @@
 
             // Vérification des identifiants pour le patient
             if (email === 'patient' && password === '456') {
-                window.location.href = 'profil_patient.html'; // Page Patient
+                window.location.href = '/profil'; // Page Patient
             } else {
                 alert('Identifiant ou mot de passe incorrects');
             }

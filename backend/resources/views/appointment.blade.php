@@ -30,6 +30,7 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
     <style>
+        
     .popup {
         display: none; /* Hidden by default */
         position: fixed;
@@ -62,6 +63,64 @@
     
     .hidden {
         display: none;
+    }
+    .appointment-form {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-form h1 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .appointment-form form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .appointment-form select, .appointment-form input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    .appointment-form select:focus, .appointment-form input:focus {
+        border-color: #007bff;
+    }
+
+    .appointment-form button {
+        background-color: #007bff;
+        color: white;
+        font-size: 18px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        grid-column: span 2;
+    }
+
+    .appointment-form button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 767px) {
+        .appointment-form {
+            padding: 20px;
+        }
+
+        .appointment-form form {
+            grid-template-columns: 1fr;
+        }
     }
     </style>
 </head>
@@ -150,7 +209,7 @@
 
 
    <!-- Appointment Start -->
-<div class="container-fluid bg-primary bg-appointment mb-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 90px;">
+   <div class="container-fluid bg-primary bg-appointment mb-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 90px;">
     <div class="container">
         <div class="row gx-5">
             <div class="col-lg-6 py-5">
@@ -162,74 +221,56 @@
             <div class="col-lg-6">
                 <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
                     <h1 class="text-white mb-4">Rendez-vous</h1>
-                    <form>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-light border-0" style="height: 55px;">
-                                    <option selected>Selectionnez un service</option>
-                                    <option value="1">Dentisterie générale</option>
-                                    <option value="1">Pédodontie</option> 
-                                    <option value="2">Orthodontie</option>
-                                    <option value="3">Chirurgie dentaire</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <select class="form-select bg-light border-0" style="height: 55px;">
-                                    <option selected>Selectionnez un médecin</option>
-                                    <option value="1">Dr. Oubeid Allah Hlal</option>
-                                    <option value="2">Dr. Amira Mourtaday</option>
-                                    <option value="3">Dr. Fatimaezzahra Kabiri</option>
-                                    <option value="4">Dr. Siham Mansouri</option>
-                                </select>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input id="name" type="text" class="form-control bg-light border-0" placeholder="Nom" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <input type="text" id="emailrdv" class="form-control bg-light border-0" placeholder="Téléphone" style="height: 55px;">
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="time" id="time1" data-target-input="nearest">
-                                    <input type="date"
-                                        class="form-control bg-light border-0 datetimepicker-input"
-                                        placeholder="Date du rendez-vous" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="time"
-                                        id="appointment-time"
-                                        name="appointment-time"
-                                        class="form-control bg-light border-0 datetimepicker-input"
-                                        placeholder="Choisir l'heure" 
-                                        style="height: 55px;" 
-                                        required>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <button id="rdv" class="btn btn-dark w-100 py-3" type="submit">Prendre rendez-vous</button>
-                            </div>
-                        </div>
-                    </form>
-                   <!-- Bootstrap Modal -->
-<div class="modal fade" id="popupModal" tabindex="-1" aria-labelledby="popupModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="popupModalLabel">Notification</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="popup-message">
-                <!-- Message will be injected here -->
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            </div>
-        </div>
+                    <form action="{{ route('rdv.store') }}" method="POST">
+    @csrf <!-- CSRF Token -->
+    <div>
+        <label for="service">Service</label>
+        <select id="Service" name="service" required>
+        <option value="">Sélectionnez un service</option>
+                <option value="Dentisterie générale">Dentisterie générale</option>
+                <option value="Pédodontie">Pédodontie</option>
+                <option value="Orthodontie">Orthodontie</option>
+                <option value="Chirurgie dentaire">Chirurgie dentaire</option>
+                </select>
     </div>
-</div>
 
-                    
+
+    <div>
+        <label for="name">Nom</label>
+        <input type="text" id="name" name="nom" required>
+    </div>
+
+    <div>
+        <label for="telephone">Telephone</label>
+        <input type="text" id="telephone" name="telephone" required>
+    </div>
+
+    <div>
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required>
+    </div>
+
+    <div>
+        <label for="heure">Heure</label>
+        <input type="time" id="heure" name="heure" required>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+@if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
+
+@if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+
+
+
                 </div>
             </div>
         </div>

@@ -143,7 +143,7 @@
                         <a href="{{ '/ressources' }}" class="dropdown-item">Ressources utiles</a>
                     </div>
                 </div>
-                <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
+                <a href="{{ '/connexion'  }}" class="nav-item nav-link">Se déconecter</a>
             </div>
             <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
             <a href="{{ '/appointment' }}" class="btn btn-primary py-2 px-4 ms-3">Rendez-vous</a>
@@ -172,7 +172,6 @@
                         <a class="text-light mb-2" href="{{ '/' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Accueil</a>
                         <a class="text-light mb-2" href="{{ '/about' }}"><i class="bi bi-arrow-right text-primary me-2"></i>A propos</a>
                         <a class="text-light mb-2" href="{{ '/service' }}"><i class="bi bi-arrow-right text-primary me-2"></i>Services</a>
-                        <a class="text-light" href="{{ route('contact') }}"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                     </div>
                 </div>
                

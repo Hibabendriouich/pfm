@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\Admin;
+use App\Models\Participant;
+use Illuminate\Support\Facades\Auth;
+
+class AuthentificationController extends Controller
+{
+    public function loginAdmin(Request $request)
+    {
+        $validated = $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::guard('admin')->attempt($validated)) {
+            return redirect()->route('indexadmin');
+        }
+
+        return back()->withErrors(['email' => 'Identifiant ou mot de passe incorrect']);
+    }
+
+    public function loginParticipant(Request $request)
+    {
+        $validated = $request->validate([
+            'email' => 'required|string',
+            'password' => 'required|string',
+        ]);
+
+        if (Auth::guard('participant')->attempt($validated)) {
+            return redirect()->route('/index');
+        }
+
+        return back()->withErrors(['email' => 'Identifiant ou mot de passe incorrect']);
+    }
+}

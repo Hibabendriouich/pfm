@@ -4,62 +4,38 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Rdv;
+use App\Enums\ServiceEnum;
 
 class RdvController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
-    {
-        //
-    }
+{
+    $validated = $request->validate([
+        'date' => 'required|date',
+        'heure' => 'required|date_format:H:i',
+        'service' => ['required', 'in:' . implode(',', array_map(fn($case) => $case->value, ServiceEnum::cases()))],
+        'nom' => 'required|string|max:255',
+        'telephone' => 'required|string|max:15',
+    ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+    $cabinet_id = auth()->user()->cabinet_id;
+    \Log::info($validated);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
+    try {
+        Rdv::create([
+            
+            'date' => $validated['date'],
+            'heure' => $validated['heure'],
+            'service' => $validated['service'],
+            'nom' => $validated['nom'],
+            'telephone' => $validated['telephone'],
+            'cabinet_id' => $cabinet_id,
+            
+        ]);
+        return redirect()->back()->with('success', 'Votre rendez-vous a été pris avec succès.');
+    } catch (\Exception $e) {
+        return redirect()->back()->with('error', 'Une erreur s\'est produite lors de l\'enregistrement.');
     }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
-}
+    
+}}
