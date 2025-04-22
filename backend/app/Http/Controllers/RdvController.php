@@ -10,8 +10,7 @@ use App\Enums\ServiceEnum;
 class RdvController extends Controller
 {
     public function store(Request $request)
-{
-  
+{ 
     try {
         Rdv::create([
             'date' => $request->input('date'),
