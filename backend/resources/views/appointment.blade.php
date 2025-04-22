@@ -227,10 +227,10 @@
         <label for="service">Service</label>
         <select id="Service" name="service" required>
         <option value="">Sélectionnez un service</option>
-                <option value="Dentisterie générale">Dentisterie générale</option>
-                <option value="Pédodontie">Pédodontie</option>
+                <option value="Dentisterie Générale">Dentisterie Générale</option>
                 <option value="Orthodontie">Orthodontie</option>
-                <option value="Chirurgie dentaire">Chirurgie dentaire</option>
+                <option value="Implants Dentaires">Implants Dentaires</option>
+                <option value="Chirurgie Dentaire">Chirurgie Dentaire</option>
                 </select>
     </div>
 
